@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Years in Service and Salary of U.S College Tenured Professors </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <style>
+    .image {
+        max-width: 100%;
+        width: 600px; /* Adjust this value as per your requirement */
+        height: auto;
+    }
+
+    @media (max-width: 600px) { /* Adjust the max-width as per your requirements */
+    .navbar-brand img {
+      width: 350px;
+    }
+  }
+</style>
+  <body>
+
+    <nav class="navbar bg-body-tertiary" >
+  <div class="container-fluid" style ="background-color :#023047; color:white; padding:20px">
+    <a class="navbar-brand" href="#">
+      <img src="h3b.png" alt="Logo" width="460" height="90" class="d-inline-block align-text-top" >
+      
+    </a>
+  </div>
+</nav>
+
+    <section class = "container" style ="margin-top: 20px;" >
+        <h2 style ="margin-bottom: 20px;"> The Effect of Years in Service on Salary of U.S College Tenured Professors </h2>
+        <hr >
+        <h3 > Abstract </h3>
+        <p>
+<div style ="margin-bottom: 10px;">
+People can observe a dilemma that many universities have faced: how to offer a competitive salary to
+attract a new talented faculty while keeping a fair compensation offer to senior professors, whose are
+fixed based on a pay scale. Does the tenured professor's salary increase as the year in experience
+increases? In this research, I will examine a Salaried for Professor data set in the "car" R package to
+demonstrate the influence of years in services with gender control on the salary of Assistant Professors,
+Associate Professors, and Professors in the US college. I expect the finding will demonstrate that tenured
+professors with a high year in service correspond to high salaries. <br>
+</div>
+
+
+      <h3 style ="margin-top: 20px;"> Null- Alternative Hypothesis</h3>
+      <p>
+    <div style ="margin-bottom: 10px;">
+     <b>Null Hypothesis:</b> There is no difference in tenured professors’ salary depending on service years.<br>
+      <b>Alternative Hypothesis:</b> Tenured professors will earn more as years in service increase.
+    </div>
+
+<h3 style ="margin-top: 20px;"> Data Description</h3>
+<div style ="margin-bottom: 10px;">
+The Salaries for Professor data set is the 2008-09 nine-month academic salary includes 397 observations
+and six variables, consisting of rank (a difference between title: Associate Professors, Assistant
+Professors, and Professors), discipline (a difference between theory and practical department), years since
+Ph.D., years in services, gender, and salary. In this research, I will only focus on the years in service
+variable with the control of the gender variable that affects the salary for nine months in US dollars of
+tenured professors.
+</div>
+
+
+    </section>
+
+<div class="container">
+    <img src="pic23.png" style="max-width: 100%">
+    <img src="pic25.png" style="max-width: 100%">
+
+</div>
+
+<section class = "container">
+
+<div style ="margin-bottom: 10px;">
+       
+
+<p>
+The formula represents a linear regression of salary annually (in US Dollars) based on their years in
+service and a dummy variable (0-1) depending on the gender of respondents. Based on the intercept, I
+expect a hypothetical female professor with 0 years of service is 92,356 dollars. The absolute t value is
+19.484 (greater than 2); therefore, I can conclude that the test is statistically significant, and the
+coefficient is significantly different from 0 at 95% of a confidence interval. The years in service coefficient is 747.6; therefore, we
+can demonstrate that by keeping other factors in the regression constant, gaining one year in service will
+help the professor's salary increase by 747.6 dollars, and a t-value is 6.7 (greater than 2) that make the test
+statistically significant. Finally, there is no association of gender in salary, as demonstrated in the t-value
+is lower than 2, making the test not statistically significant. 
+</p>
+</div>
+
+
+<section class ="container" style ="background-color: antiquewhite; padding:10px; margin-bottom: 20px;">
+<div> 
+    <h5 style ="padding-top: 10px;"><b style ="border-bottom: 2px solid black;"> Conclusions </b></h5>
+<div style ="margin-bottom: 10px;">
+Based on the data, I can observe the casual relationship that represents a positive correlation between the
+years in service and professors' salaries. In more detail, more years in services will cause a higher amount
+of professors' income. I believe the result is reasonable when more years in service will help tenured
+professors have more contributions, such as research outcomes to the university that will lead to higher
+income rewards. Besides that, the more experienced professors tend to be more productive than the less
+experienced professors while they do not need to be in training for the new projects or classes. Finally,
+with more years in service, professors always have a greater responsibility, such as being an advisor in a
+department, or a leader in a research group that helps them earn a higher income. However, it is an
+observational study, so it contains a selection bias. It might include other omitted variable biases that can
+influence the result, such as universities where professors earn Ph.D. degree or family backgrounds.
+According to the data, the factor of gender does not affect the outcome when it is not statistically
+significant.
+</div>
+<div>
+Based on the analysis, I can reject the null hypothesis, and the result illustrates the higher salary for
+professors having higher years in service. The effect of gender on salary remains inconclusive, and
+and further studies are crucial to guarantee gender equality in a professional environment.
+</div>
+
+
+
+</section>
+
+
+
+</section>
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div >
+
+  <footer class=" text-center text-lg-start text-white" style ="background-color: #023047;">
+    <!-- Grid container -->
+
+    <div class = "d-flex justify-content-end" style ="padding:10px">
+   <a href ="index.html"><button class="btn btn-lg " style="background-color: antiquewhite; color:black">
+      Go Back to Homepage
+    </button></a>
+
+</div>
+    
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      Tien Truong | Behavior Research and Data Analytics Projects 
+      
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>

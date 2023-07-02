@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modified National Institute of Standards and Technology Database Project </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <style>
+    .image {
+        max-width: 100%;
+        width: 600px; /* Adjust this value as per your requirement */
+        height: auto;
+    }
+
+    @media (max-width: 600px) { /* Adjust the max-width as per your requirements */
+    .navbar-brand img {
+      width: 350px;
+    }
+  }
+
+   @media (max-width: 480px) { /* Adjust the max-width as needed */
+    video {
+      width: 320px; /* Set the width to 100% for smaller screens */
+      height: 180px; /* Allow the height to adjust proportionally */
+    }
+  }
+</style>
+  <body>
+
+    <nav class="navbar bg-body-tertiary" >
+  <div class="container-fluid" style ="background-color :#023047; color:white; padding:20px">
+    <a class="navbar-brand" href="#">
+      <img src="h3b.png" alt="Logo" width="460" height="90" class="d-inline-block align-text-top" >
+      
+    </a>
+  </div>
+</nav>
+
+    <section class = "container" style ="margin-top: 20px;" >
+        <h2 style ="margin-bottom: 20px;"> Modified National Institute of Standards and Technology Database Project </h2>
+        <hr >
+        <h3 > Introduction </h3>
+        <p>
+<div style ="margin-bottom: 10px;">
+The MNIST project stands as a cornerstone in the realm of machine learning and computer vision. It revolves around the formidable task of classifying handwritten digits, employing the extensive MNIST dataset—a trove of labeled images capturing diverse handwritten representations of numbers ranging from 0 to 9. <br>
+</div>
+
+<div style ="margin-bottom: 10px;">
+    The project's primary objective is to devise a machine learning model that can achieve precise recognition and classification of these handwritten digits. Through training a neural network on the MNIST dataset, the aim is to construct a model that possesses the ability to generalize effectively, accurately classifying previously unseen handwritten digits.
+ <br>
+</div>
+
+<div style ="margin-bottom: 10px;">
+    The significance of the MNIST project extends beyond its immediate application in digit classification. It serves as a benchmark for evaluating the efficacy of various machine learning algorithms and neural network architectures. As one of the most widely recognized and frequently studied tasks in the field, MNIST offers a standardized platform for comparing and advancing the capabilities of different models and techniques.
+ <br>
+</div>
+      
+
+<h3 style ="margin-top: 20px;"> Data Description</h3>
+<div style ="margin-bottom: 10px;">
+The MNIST dataset itself is a compilation of 60,000 training images and 10,000 testing images, each with a resolution of 28x28 pixels. These images represent grayscale renderings of handwritten digits, captured from a diverse set of sources. The dataset's large size and meticulous labeling make it an ideal resource for training and evaluating machine learning models.
+</div>
+
+<h3 style ="margin-top: 20px;"> Convolutional Neural Network Model </h3>
+<div style ="margin-bottom: 10px;">
+I created a Convolutional Neural Network (CNN) model using the Keras library in Python to achieve high accuracy on the MNIST dataset. The model architecture consists of multiple layers:
+<ul>
+    <li><b>Conv2D:</b> Convolutional layer with specified filters, kernel size, and activation function. It extracts features from input images.</li>
+    <li><b>MaxPooling2D:</b> Performs max pooling to downsample the feature maps, reducing the spatial dimensions.</li>
+    <li><b>Flatten:</b> Flattens the multi-dimensional feature maps into a one-dimensional vector, preparing for the fully connected layers</li>
+    <li><b>Dense:</b> Fully connected layers that learn complex patterns and make predictions. The output layer uses the softmax activation function to produce probability scores for each digit class.</li>
+    
+</ul>
+</div>
+
+    </section>
+
+<div class="container">
+    <img src="h31.png" style="max-width: 100%">
+    <div style ="margin-bottom: 10px;">
+I achieved an accuracy of 99% on the MNIST dataset using the CNN model. By leveraging the power of convolutional layers for feature extraction and the fully connected layers for classification, the model demonstrates a strong ability to accurately classify handwritten digits.<br>
+
+This high level of accuracy is a testament to the effectiveness of the chosen architecture and the successful training process. It indicates that the model has learned intricate patterns and representations from the training data, allowing it to generalize well and accurately classify previously unseen handwritten digits.
+</div>
+
+</div>
+
+<section class = "container">
+
+<div style ="margin-bottom: 10px;">
+ <h3>Result</h3>
+  <video width="640" height="360" controls>
+    <source src="movie1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>      
+
+<p>
+
+</p>
+</div> 
+
+
+<section class ="container" style ="background-color: antiquewhite; padding:10px; margin-bottom: 20px;">
+<div> 
+    <h5 style ="padding-top: 10px;"><b style ="border-bottom: 2px solid black;"> Conclusions </b></h5>
+<div style ="margin-bottom: 10px;">
+Through the use of a convolutional neural network (CNN) architecture and training on the MNIST dataset, we were able to achieve a remarkable accuracy of 99%. This high level of accuracy showcases the effectiveness of the chosen model and its ability to generalize well to unseen handwritten digits.<br>
+
+The successful outcome of this project highlights the power of deep learning techniques in solving image classification tasks. The CNN model demonstrated its proficiency in extracting meaningful features from the input images and making accurate predictions. This achievement not only solidifies our understanding of CNNs but also showcases our ability to implement complex machine learning algorithms effectively.<br>
+
+The impact of the MNIST project extends beyond digit recognition. It serves as a benchmark for evaluating and comparing different machine learning algorithms and techniques. The insights gained from this project can be applied to various real-world applications such as optical character recognition (OCR), automated mail sorting, and advancements in medical imaging.
+</div>
+
+
+
+
+</section>
+
+
+
+</section>
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div >
+
+  <footer class=" text-center text-lg-start text-white" style ="background-color: #023047;">
+    <!-- Grid container -->
+
+    <div class = "d-flex justify-content-end" style ="padding:10px">
+   <a href ="index.html"><button class="btn btn-lg " style="background-color: antiquewhite; color:black">
+      Go Back to Homepage
+    </button></a>
+
+</div>
+    
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      Tien Truong | Behavior Research and Data Analytics Projects 
+      
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>

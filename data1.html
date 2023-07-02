@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drivers of Life Expectancy: A Demography vs. Policy Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <style>
+    .image {
+        max-width: 100%;
+        width: 600px; /* Adjust this value as per your requirement */
+        height: auto;
+    }
+
+    @media (max-width: 600px) { /* Adjust the max-width as per your requirements */
+    .navbar-brand img {
+      width: 350px;
+    }
+  }
+</style>
+  <body>
+
+    <nav class="navbar bg-body-tertiary" >
+  <div class="container-fluid" style ="background-color :#023047; color:white; padding:20px">
+    <a class="navbar-brand" href="#">
+      <img src="h3b.png" alt="Logo" width="460" height="90" class="d-inline-block align-text-top" >
+      
+    </a>
+  </div>
+</nav>
+
+    <section class = "container" style ="margin-top: 20px;" >
+        <h2 style ="margin-bottom: 20px;"> Uncovering the Drivers of Life Expectancy: A Demography vs. Policy Analysis </h2>
+        <hr >
+        <h3> Abstract </h3>
+        <p>
+<div style ="margin-bottom: 10px;">
+This project aims to improve an understanding of the factors affecting life expectancy on a county level in the United States. The analysis builds upon the paper "The Association between Income and Life Expectancy in the United States, 2001-2014," which highlights the strong relationship between socioeconomic background and health outcomes.<br>
+</div>
+
+
+<div style ="margin-bottom: 10px;">
+In this project, I explore how other variables beyond income, which are divided into demographic and policy factors, may affect life expectancy.
+My analysis reveals that some demographic variables, such as smoking and the fraction of children with a single mother, are negative indicators of life expectancy. Similarly, some policy variables, such as the fraction of the middle class and unemployment rates, also have negative effects on life expectancy. The models' performance, as measured by MSE, was satisfactory overall.<br>
+</div>
+
+<div style ="margin-bottom: 10px;">
+My models could be used to predict life expectancy on a county level, and then provide guidance for individual and policy changes to promote better health outcomes.
+</div>
+        </p>
+
+      <h3> Project Background</h3>
+      <p>
+    <div style ="margin-bottom: 10px;">
+        The project “The Association Between Income and Life Expectancy in the United States, 2001-2014” by economists Raj Chetty et al. aims to study how life expectancy is affected or correlated to several economics-related variables. The practical intent of this study was to gain knowledge on how to reduce the impact of socio-economic disparities in health outcomes. This stemmed from observations of lower-income individuals and areas having lower life-expectancy than wealthier ones.<br>
+    </div>
+
+<div style ="margin-bottom: 10px;">
+
+In brief, the aforementioned economists wanted to understand the extent of these observations while expanding by studying other variables that could explain the relationship such as the evolution of the relationship over time, etc.
+</div>
+
+<div style ="margin-bottom: 10px;">
+It is worth noting that the data was gathered from the IRS, the CDC, and the Social Security Administration, making the project groundbreaking since the economists were “analyzing newly available data on income and mortality for the US population from 1999 through 2014” (Chetty et al).
+</div>
+
+<div style ="margin-bottom: 10px;">
+They aimed to characterize overall the relationship between life expectancy at 40 years old and income in the US as a whole. Then, they explored deeper potential explanations such as the evolution of this relationship from 2001 to 2014, the difference in this relationship among geographic areas, and how the different socio-economic groups vary among different geographic areas.
+
+</div>
+
+<div style ="margin-bottom: 10px;">
+They found 4 correlations: there is a large gap in life expectancy between wealthy and less affluent Americans. Second, this gap has grown over time. Third, life expectancy for low-income Americans varies significantly across different areas of the country. And fourth, that the life expectancy of low-income Americans is significantly higher in wealthier areas.
+</div>
+<div style ="margin-bottom: 10px;">
+However, Chetty et al. were not able to determine causality in their study since they were not able to eliminate or include in the model certain variables (they mention they were unable to find a numeric correlation between healthcare and longevity, yet that variable is likely to play into the variation of life-expectancy).
+</div>
+<div style ="margin-bottom: 10px;">
+With this in mind, to expand and further solidify this study it is reasonable to look into other variables that weren’t fully explained or included in Chetty et al.’s analysis to find quantitative correlations or to aim and disregard their relationship to life expectancy.
+</div>
+      </p>
+<h3 >  Project Objective </h3>
+<div style ="margin-bottom: 10px;">
+The purpose of this project is to measure the impacts of two sets of variables: demographic variables (such as obesity levels, prevalence of smoking, gender, etc.) and public policy-related variables (expenditure in education, insurance enrollment, etc.) to life expectancy. I aim to see the relationship between these variables–if there is any–to life expectancy to further understand the claims Chetty et al. presented in their study of these datasets. Ultimately, I hope that expanding on their research will contribute to their objective of informing how the US policy makers can predict life expectancy and mitigate the impact of demographic and socio-economic disparities on health outcomes through public policy initiatives.
+
+</div>
+
+<h3 > Data Description</h3>
+<div style ="margin-bottom: 10px;">
+As aforementioned, Chetty et al. used data from the CDC, the IRS, and the SSA. This provided them comprehensive data from 1999 to 2014 for all individuals with a Social Security number. This also allowed them to develop their own variables, significantly the life expectancy variable which depends on mortality, a varying metric depending on the measuring organization.
+
+The corresponding paper is "The Association Between Income and Life Expectancy in the United States, 2001-2014".
+</div>
+
+
+    </section>
+
+<div class="container">
+    <img src="data.png" style="max-width: 100%">
+</div>
+
+<section class = "container">
+
+<h3 > Part 1: Demographic Analysis</h3>
+<hr>
+<div style ="margin-bottom: 10px;">
+       <h5>Histogram of Life Expectancy</h5>
+
+<img src="pic1.png" style="max-width: 100%" class ="image">
+<p>
+The histogram demonstrates the distribution of life expectancy values in the demographic dataset. The x-axis represents the life expectancy values and the y-axis represents the frequency of occurrence for each value.The histogram shows a roughly bell-shaped distribution, which suggests that the data follows a normal distribution.The mean life expectancy is 83, which is close to the peak of the histogram.
+</p>
+</div>
+<div>
+   <h5> Relationship Between Smoking Rate and Life Expectancy</h5>
+<img src="pic2.png" style="max-width: 100%" class ="image">
+<p>
+Based on the analysis of the correlation coefficient and scatter plot, there appears to be a significant negative correlation between smoking rate and life expectancy. This suggests a causal relationship in which an increase in smoking rate is associated with a decrease in life expectancy.
+</p>
+
+ <h5> Heatmap of correlation matrix</h5>
+<img src="project3.png" style="max-width: 100%" class ="image">
+<p>
+The heatmap demonstrates the correlation between the demography factors. Based on the map, I can notice a strong positive correlation between exercise, household income, and education in life expectancy and a negative correlation between smoking, and obese in life expectancy.
+</p>
+
+
+<h5> Demographic Modeling </h5>
+<img src="pic4.png" style="max-width: 100%" >
+<p style ="margin-top: 10px;">
+I remove all insignificant variables and rerun OLS, as I have no reason to believe any of these specific variables are important regardless of regression results. We see that adjusted R^2 decreases from 0.756 to 0.748, which is not a large magnitude. I also see that the constant is now 80.2316, which seems close to the average overall life expectancy, meaning this model is more accurate.
+</p>
+
+<h5> Multiple Linear Regression Model </h5>
+<img src="pic5.png" style="max-width: 100%" >
+
+
+
+
+</div>
+</section>
+
+
+
+
+ <section class = "container">
+
+<h3 > Part 2: Policy Analysis</h3>
+<hr>
+
+
+<div style ="margin-bottom: 10px;">
+       
+
+<img src="pic7.png" style="max-width: 100%">
+<p>
+I selected a subset of the main dataframe to focus on policy-related variables. They includes Poverty Rate, Labor Force Participation, Local Tax Rate, etc.
+</p>
+</div>
+<div>
+   <h5> Boxplot of Life Expectancy</h5>
+<img src="pic8.png" style="max-width: 100%" class ="image">
+<p>
+The boxplot shows the distribution of life expectancy in U.S. counties. The 25th percentile is around 82 years old. The median is around 82.7 years old. The 75th percentile is a bit less than 84 years old. This distribution is pretty concentrated with small deviation from the median. It is also right skewed with some outliers on either side.
+</p>
+
+ <h5> Heatmap of Correlation between Policy Columns</h5>
+<img src="proj10.png" style="max-width: 100%" class ="image">
+<p>
+From the heatmap, there are some relatively strong correlation (r>0.4) between life expectancy and scap_ski90pcm, cs_labforce, ccd_exp_tot, e_rank_b. These variables correspond to Social Capital Index, Labor Force Participation, School Expenditure per Student, Absolute Mobility
+</p>
+
+
+<h5> Policy Modeling </h5>
+<img src="pic12.png" style="max-width: 100%" >
+<p style ="margin-top: 10px;">
+The R squared is 0.626 at this point, which indicates a relatively strong correlation between the selected columns and life expectancy. These columns will be considered further in our ML models.
+
+I also noticed that some columns have negative coefficient, which means as these variables increase, the county's predicted life expectancy decreases.
+</p>
+
+
+</div>
+</section>
+
+<section class ="container" style ="background-color: antiquewhite; padding:10px; margin-bottom: 20px;">
+<div> 
+    <h5 style ="padding-top: 10px;"><b style ="border-bottom: 2px solid black;"> Conclusions </b></h5>
+<div style ="margin-bottom: 10px;">
+
+How do income inequality and life expectancy vary across different socioeconomic groups in the United States? How does education impact the life expectancy? These are some questions that economists and policymakers may consider in designing a policy that benefits the life expectancy of the population across the country. Based on the analysis, people can observe the positive correlation between life expectancy and education. Education tends to promote a healthier lifestyle such as eating a diet and doing exercise regularly, and prevent unhealthy behaviors such as smoking. Besides that, I analyze the positive correlation between healthcare expenditure and life expectancy. Equality in accessing and treating can prevent illnesses and lead to better healthcare outcomes and longer life expectancy. Furthermore, I observe the negative correlation between income inequality and life expectancy. The limited access to healthcare, healthy food, and safe living condition, the environmental hazards, and the high rates of chronic stress are some reasons that may cause the shorter life expectancy in the low-income group. Besides the demographic analysis, I learn the effect of policy in affecting life expectancy, including the negative correlation between high poverty rates and lack of health insurance in life expectancy. Economists and policymakers can consider investing in a healthy lifestyle and nutrition education and expanding Medicaid coverage to provide health insurance to low-income families. Furthermore, I learn the positive correlation of job opportunities in life expectancy that the policymakers might promote job growth. While income inequality has a negative correlation with life expectancy, it is crucial to understand the complex relationship between life expectancy and social determinants of health that requires further research and studies.
+</div>
+
+
+
+</section>
+
+
+</div>
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div >
+
+  <footer class=" text-center text-lg-start text-white" style ="background-color: #023047;">
+    <!-- Grid container -->
+
+    <div class = "d-flex justify-content-end" style ="padding:10px">
+   <a href ="newindex.html"><button class="btn btn-lg " style="background-color: antiquewhite; color:black">
+      Go Back to Homepage
+    </button></a>
+
+</div>
+    
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      Tien Truong | Behavior Research and Data Analytics Projects
+      
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
